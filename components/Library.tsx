@@ -24,7 +24,6 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
 		// TODO: check for subscription
 		return uploadModal.onOpen();
 	};
-	console.log(songs.value);
 
 	return (
 		<div className="flex flex-col">
@@ -40,7 +39,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
 				/>
 			</div>
 			<div className="flex flex-col gap-y-2 mt-4 px-3">
-				{songs?.value.map(item => (
+				{songs.map(item => (
 					<MediaItem onClick={() => {}} key={item.id} data={item} />
 				))}
 				{/* Name */}
